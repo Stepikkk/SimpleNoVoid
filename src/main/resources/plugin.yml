@@ -1,0 +1,5 @@
+name: SimpleNoVoid
+main: cz.stepa.simplenovoid.Main
+version: "0.2"
+api: ["1.0.0"]
+author: Stepa011

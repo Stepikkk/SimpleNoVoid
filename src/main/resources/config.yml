@@ -1,0 +1,18 @@
+
+#Config file for SimpleNoVoid plugin
+#Use " " for respawn message and world name ex.: "You have been teleported to spawn!"
+#You can use § or & for colors.
+
+#Enable SimpleNoVoid?
+enable: true
+
+#World for teleport (Lobby world)
+world: "world"
+
+#Teleported to world message (Leave " " for disabling message)
+#Ex.: "§lYou have been teleported to spawn"
+savedFromVoid: " "
+
+#Y coordinate trigger (Default 0)
+floorCoord: 0
+

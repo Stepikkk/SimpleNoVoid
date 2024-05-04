@@ -30,8 +30,7 @@ public class Main extends PluginBase implements Listener {
             if(c.getString("savedFromVoid").equals(" ")) return;
             else {
                 e.getPlayer().sendMessage(this.c.getString("savedFromVoid"));
+                }
             }
-        }
-
         }
     }

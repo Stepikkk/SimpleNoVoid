@@ -21,11 +21,12 @@ public class Main extends PluginBase implements Listener {
 
     @EventHandler
     public void onVoid(PlayerMoveEvent e) {
-        int x = this.getServer().getLevelByName(this.c.getString("world")).getSafeSpawn().getFloorX();
-        int y = this.getServer().getLevelByName(this.c.getString("world")).getSafeSpawn().getFloorY();
-        int z = this.getServer().getLevelByName(this.c.getString("world")).getSafeSpawn().getFloorZ();
-        Level world = this.getServer().getLevelByName(this.c.getString("world"));
         if (e.getTo().getFloorY() < teleportCoord && this.c.getBoolean("enable")) {
+            Level world = this.getServer().getLevelByName(this.c.getString("world"));
+            Position position = this.getServer().getLevelByName(this.c.getString("world")).getSafeSpawn();
+            int x = position.getFloorX();
+            int y = position.getFloorY();
+            int z = position.getFloorZ();
             e.getPlayer().teleport(new Position((double)x, (double)y, (double)z, world));
             if(c.getString("savedFromVoid").equals(" ")) return;
             else {
